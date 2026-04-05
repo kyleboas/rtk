@@ -293,14 +293,7 @@ pub fn run(
     }
 
     println!();
-    let env_disabled = std::env::var("RTK_TELEMETRY_DISABLED").unwrap_or_default() == "1";
-    let config_disabled = matches!(config::telemetry_enabled(), Some(false));
-    if env_disabled || config_disabled {
-        println!("  [info] Anonymous telemetry is disabled");
-    } else {
-        println!("  [info] Anonymous telemetry is enabled by default (opt-out: RTK_TELEMETRY_DISABLED=1)");
-    }
-    println!("  [info] See: https://github.com/rtk-ai/rtk#privacy--telemetry");
+    println!("  [info] Telemetry has been removed in this fork (no phone-home).");
 
     Ok(())
 }
